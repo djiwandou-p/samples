@@ -2,6 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 import 'src/autofill.dart';
@@ -11,7 +12,14 @@ import 'src/sign_in_http.dart';
 import 'src/validation.dart';
 
 void main() {
-  runApp(const FormApp());
+  // runApp(const FormApp());
+
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const FormApp(),
+    ),
+  );
 }
 
 final demos = [
